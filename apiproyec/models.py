@@ -8,9 +8,9 @@ from django.conf import settings
 #1)Clase libro 
 class Libro(models.Model):
     idLibro = models.BigAutoField(primary_key=True)
-    nombre = models.CharField(max_length=200)
+    titulo = models.CharField(max_length=200)
     autor = models.CharField(max_length=150)
-    anioPublicacion = models.IntegerField()
+    año_Publicacion = models.IntegerField()
 
 
     def __str__(self):
@@ -37,9 +37,9 @@ class ArticuloTecnologico(models.Model):
 # 3)Clase estudiante
 class Estudiante(models.Model):
     idEstudiante = models.BigAutoField(primary_key=True)
-    nombreCompleto = models.CharField(max_length=50)
+    nombre_Completo = models.CharField(max_length=50)
     rut = models.CharField(max_length=12)
-    correoInstitucional = models.EmailField()
+    correo_Institucional = models.EmailField()
     telefono = models.CharField(max_length=12)
 
     def __str__(self):
