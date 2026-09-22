@@ -1,4 +1,5 @@
 from rest_framework import serializers
+<<<<<<< HEAD
 from .models import Libro, ArticuloTecnologico, Estudiante, Prestamo
 
 class LibroSerializer(serializers.ModelSerializer):
@@ -83,3 +84,55 @@ class PrestamoSerializer(serializers.ModelSerializer):
         return attrs
         
         
+=======
+from .models import Libro,ArticuloTecnologico,Restriccion
+
+#
+
+class LibroSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Libro
+        fields = [
+            'idLibro',
+            'nombre',
+            'autor',
+            'anioPublicacion',
+        ]
+
+
+
+#RN-3
+class ArticuloTecnologicoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ArticuloTecnologico
+        fields = [
+            'idArticulo',
+            'tipo',
+        ]
+
+
+# RF-08 y RF-10 
+class RestriccionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Restriccion
+        fields = [
+            'idRestriccion',
+            'estudiante',
+            'tipoRestriccion',
+            'fechaRestriccion',
+            'estadoRestriccion',
+        ]
+# RF-17: consulta de libros más prestados
+class LibroMasPrestadoSerializer(serializers.ModelSerializer):
+    totalPrestamos = serializers.IntegerField(read_only=True)
+
+    class Meta:
+        model = Libro
+        fields = [
+            'idLibro',
+            'nombre',
+            'autor',
+            'anioPublicacion',
+            'totalPrestamos',
+        ]
+>>>>>>> d464479 (15:43)
