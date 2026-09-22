@@ -1,6 +1,7 @@
 hoaskdfognsamkfweas
 
 
+<<<<<<< HEAD
 
 
 
@@ -12,3 +13,6 @@ hoaskdfognsamkfweas
 
 
 V:
+=======
+hola, ahora estoy haciendo un cambio. 22/09/2026 00:52hrs
+>>>>>>> 5287fba17d884c17386095871de7dd524a69825c
